@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>SooProject1.0.0</display-name>
+  <!-- 필터를 설정한다.-->
+<filter> 
+<filter-name>CharacterEncodingFilter</filter-name> 
+<filter-class>soo.filter.CharacterEncodingFilter</filter-class> 
+<init-param> <param-name>encoding</param-name> 
+<param-value>UTF-8</param-value> 
+</init-param> 
+</filter>
+<!-- 필터 매핑명을 설정한다.-->
+<filter-mapping> 
+<filter-name>CharacterEncodingFilter</filter-name> 
+<url-pattern>/*</url-pattern> 
+</filter-mapping>
+  
+<servlet>
+    <servlet-name>QnaDispatcherServlet</servlet-name>
+    <servlet-class>soo.qna.frontcontroller.QnaDispatcherServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QnaDispatcherServlet</servlet-name>
+    <url-pattern>*.qb</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ReviewDispatcherServlet</servlet-name>
+    <servlet-class>soo.review.frontcontroller.ReviewDispatcherServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReviewDispatcherServlet</servlet-name>
+    <url-pattern>*.rb</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
