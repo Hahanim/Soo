@@ -4,7 +4,7 @@
   <!-- 필터를 설정한다.-->
 <filter> 
 <filter-name>CharacterEncodingFilter</filter-name> 
-<filter-class>soo.filter.CharacterEncodingFilter</filter-class> 
+<filter-class>fideco.filter.CharacterEncodingFilter</filter-class> 
 <init-param> <param-name>encoding</param-name> 
 <param-value>UTF-8</param-value> 
 </init-param> 
@@ -15,22 +15,22 @@
 <url-pattern>/*</url-pattern> 
 </filter-mapping>
   
-<servlet>
+	<servlet>
     <servlet-name>QnaDispatcherServlet</servlet-name>
-    <servlet-class>soo.qna.frontcontroller.QnaDispatcherServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
+    <servlet-class>fideco.qna.frontcontroller.QnaDispatcherServlet</servlet-class>
+    </servlet>  
+    <servlet>
+    <servlet-name>ReviewDispatcherServlet</servlet-name>
+    <servlet-class>fideco.review.frontcontroller.ReviewDispatcherServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
     <servlet-name>QnaDispatcherServlet</servlet-name>
     <url-pattern>*.qb</url-pattern>
-  </servlet-mapping>
-  <servlet>
+    </servlet-mapping>
+    <servlet-mapping>
     <servlet-name>ReviewDispatcherServlet</servlet-name>
-    <servlet-class>soo.review.frontcontroller.ReviewDispatcherServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ReviewDispatcherServlet</servlet-name>
-    <url-pattern>*.rb</url-pattern>
-  </servlet-mapping>
+    <url-pattern>*.rb</url-pattern>    
+    </servlet-mapping>
   
   
   
