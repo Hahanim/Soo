@@ -30,6 +30,7 @@
 <div class="card"> 
 <div class="card-header"> 
 <h3> 게시글 목록 </h3> 
+<a href="./LoginMain.me" class="Login_mainHome">메인 홈</a>
 </div> 
 <div class="card-body"> 
 <table class="table table-hover"> 

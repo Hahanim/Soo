@@ -2,7 +2,6 @@ package fideco.review.service;
 
 import java.util.ArrayList;
 
-import fideco.qna.dto.QnaDTO;
 import fideco.review.dto.ReviewDTO;
 
 public interface ReviewService {
